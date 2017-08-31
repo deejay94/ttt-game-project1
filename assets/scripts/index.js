@@ -11,25 +11,50 @@ const tttArrray = ['X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
 let i = 0
 
 const checkWhoWins = function () {
+  if (i <= 9) {
   if (($('#box1').text() === $('#box2').text() && $('#box2').text() === $('#box3').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
     console.log('Winner')
+    $('#first').text('winner')
+    i = 9
   } else if (($('#box1').text() === $('#box5').text() && $('#box5').text() === $('#box9').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
     console.log('Winner')
+    $('#first').text('winner')
+    i = 9
+
   } else if (($('#box1').text() === $('#box4').text() && $('#box4').text() === $('#box7').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
     console.log('Winner')
+    $('#first').text('winner')
+    i = 9
+
   } else if (($('#box2').text() === $('#box5').text() && $('#box5').text() === $('#box8').text()) && ($('#box2').text() === 'X' || $('#box2').text() === 'O')) {
     console.log('Winner')
+    $('#first').text('winner')
+    i = 9
+
   } else if (($('#box3').text() === $('#box6').text() && $('#box6').text() === $('#box9').text()) && ($('#box3').text() === 'X' || $('#box3').text() === 'O')) {
     console.log('Winner')
+    $('#first').text('winner')
+    i = 9
+
   } else if (($('#box4').text() === $('#box5').text() && $('#box5').text() === $('#box6').text()) && ($('#box4').text() === 'X' || $('#box4').text() === 'O')) {
     console.log('Winner')
+    $('#first').text('winner')
+    i = 9
+
   } else if (($('#box3').text() === $('#box5').text() && $('#box5').text() === $('#box7').text()) && ($('#box3').text() === 'X' || $('#box3').text() === 'O')) {
     console.log('Winner')
+    $('#first').text('winner')
+    i = 9
+
   } else if (($('#box7').text() === $('#box8').text() && $('#box8').text() === $('#box9').text()) && ($('#box7').text() === 'X' || $('#box7').text() === 'O')) {
     console.log('Winner')
+    $('#first').text('winner')
+    i = 9
+  } else if (i === 9) {
+    $('#first').text('It\'s a draw!')
   }
 }
-
+}
 $(() => {
   $('.box').on('click', function () {
     // event.preventDefault()
