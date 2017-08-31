@@ -10,6 +10,8 @@ const tttArrray = [[null, null, null], [null, null, null], [null, null, null]]
 //   })
 // })
 
+if ()
+
 const name = function (event) {
   event.preventDefault()
   console.log('button works')
