@@ -7,104 +7,103 @@ $(() => {
   setAPIOrigin(location, config)
 })
 
-const tttArrray = ['X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
-let i = 0
+const tttArray = [
+  [' ', ' ', ' '],
+  [' ', ' ', ' '],
+  [' ', ' ', ' ']
+]
 
-const checkWhoWins = function () {
-  if (i <= 9) {
-  if (($('#box1').text() === $('#box2').text() && $('#box2').text() === $('#box3').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
-    console.log('Winner')
-    $('#first').text('winner')
-    i = 9
-  } else if (($('#box1').text() === $('#box5').text() && $('#box5').text() === $('#box9').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
-    console.log('Winner')
-    $('#first').text('winner')
-    i = 9
+let clickCounter = 0
 
-  } else if (($('#box1').text() === $('#box4').text() && $('#box4').text() === $('#box7').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
-    console.log('Winner')
-    $('#first').text('winner')
-    i = 9
+const displayX = function () {
+  clickCounter += 1
+  $(this).text('X')
+  const i = $(this).data('i')
+  const j = $(this).data('j')
+  tttArray[i][j] = 'X'
+  console.log(tttArray)
+  console.log(clickCounter)
+}
+const displayO = function () {
+  clickCounter += 1
+  $(this).text('O')
+  const i = $(this).data('i')
+  const j = $(this).data('j')
+  tttArray[i][j] = 'O'
+  console.log(clickCounter)
+}
 
-  } else if (($('#box2').text() === $('#box5').text() && $('#box5').text() === $('#box8').text()) && ($('#box2').text() === 'X' || $('#box2').text() === 'O')) {
-    console.log('Winner')
-    $('#first').text('winner')
-    i = 9
-
-  } else if (($('#box3').text() === $('#box6').text() && $('#box6').text() === $('#box9').text()) && ($('#box3').text() === 'X' || $('#box3').text() === 'O')) {
-    console.log('Winner')
-    $('#first').text('winner')
-    i = 9
-
-  } else if (($('#box4').text() === $('#box5').text() && $('#box5').text() === $('#box6').text()) && ($('#box4').text() === 'X' || $('#box4').text() === 'O')) {
-    console.log('Winner')
-    $('#first').text('winner')
-    i = 9
-
-  } else if (($('#box3').text() === $('#box5').text() && $('#box5').text() === $('#box7').text()) && ($('#box3').text() === 'X' || $('#box3').text() === 'O')) {
-    console.log('Winner')
-    $('#first').text('winner')
-    i = 9
-
-  } else if (($('#box7').text() === $('#box8').text() && $('#box8').text() === $('#box9').text()) && ($('#box7').text() === 'X' || $('#box7').text() === 'O')) {
-    console.log('Winner')
-    $('#first').text('winner')
-    i = 9
-  } else if (i === 9) {
-    $('#first').text('It\'s a draw!')
+// $('.col').on('click', function () {
+//   clickCounter += 1
+//   $(this).text('X')
+//   const i = $(this).data('i')
+//   const j = $(this).data('j')
+//   tttArray[i][j] = 'X'
+//   console.log(tttArray)
+//   console.log(clickCounter)
+// })
+const displayLetter = function () {
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      if (tttArray[i][j] === ' ' && clickCounter % 2 === 0) {
+        displayX()
+      } else if (tttArray[i][j] === ' ' && clickCounter % 2 === 1) {
+        displayO()
+      } else {
+        $('#message').text('Please choose another square')
+      }
+    }
   }
 }
-}
-$(() => {
-  $('.box').on('click', function () {
-    // event.preventDefault()
-    $(this).text(tttArrray[i])
-    i++
-    $(this).attr('disabled', 'disabled')
-    checkWhoWins()
-  })
-})
-// let clickCounter = 0
-// let letter
 
-
+$('.col').on('click', displayLetter)
 
 // const displayX = function () {
-//   // event.preventDefault()
-//   $(this).text('X')
 //   clickCounter += 1
-//   console.log(this)
+//   $(this).text('X')
+//   i // = $(this).data('i')
+//   j // = $(this).data('j')
+//   tttArray[i][j] = 'X'
+//   console.log(tttArray)
+//   console.log(clickCounter)
+// }
+// const displayO = function () {
+//   clickCounter += 1
+//   $(this).text('O')
+//   i // = $(this).data('i')
+//   j // = $(this).data('j')
+//   tttArray[i][j] = 'O'
+//   console.log(clickCounter)
 // }
 
 // const displayLetter = function () {
-//   if (clickCounter % 2 === 0) {
-//     clickCounter += 1
-//     $(this).text('X')
+//   clickCounter += 1
+//   if (tttArray[i][j] === ' ' && clickCounter % 2 === 0) {
+//     displayX()
+//   } else if (tttArray[i][j] === ' ' && clickCounter % 2 === 0) {
+//     displayO()
 //   } else {
-//     clickCounter += 1
-//     $(this).text('O')
+//     $('#message').text('Please choose another square')
 //   }
-//   console.log($(this))
 // }
+
+// $('.col').on('click', displayX)
+// $('.col').on('click', function () {
+//   clickCounter += 1
+//   $(this).text('X')
+//   const i = $(this).data('i')
+//   const j = $(this).data('j')
+//   tttArray[i][j] = 'X'
+//   console.log(clickCounter)
+// })
 //
-// const noRepeat = function () {
-//   letter = $(this).text()
-//
-//   if (letter === 'X') {
-//     //console.log(letter)
-//   return 'X'
-// }
-// else if (letter === 'O'){
-//   return 'O'
-// }
-// else {
-//   displayLetter()
-// }
-// console.log($(this).text())
-// }
-//
-// $(() => {
-//   $("button[class^='col-xs-4']").on('click', noRepeat)
+// $('.col').on('click', function () {
+//   clickCounter += 1
+//   $(this).text('O')
+//   const i = $(this).data('i')
+//   const j = $(this).data('j')
+//   tttArray[i][j] = 'O'
+//   console.log(clickCounter)
 // })
 
 // use require with a reference to bundle the file and use it in this file
@@ -114,5 +113,4 @@ $(() => {
 // require('./example')
 
 module.exports = {
-  // displayLetter
 }
