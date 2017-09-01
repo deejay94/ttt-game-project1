@@ -1,4 +1,3 @@
-const handler = require('./index')
 
 const tttArrray = ['', '', '', '', '', '', '', '', '']
 let clickCounter = 0
@@ -27,4 +26,8 @@ const displayLetter = function (event) {
       displayO(event.target)
     }
   }
+}
+
+module.exports = {
+  displayLetter
 }
