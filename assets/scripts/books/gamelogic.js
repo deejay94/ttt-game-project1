@@ -1,37 +1,76 @@
-const tttArrray = [[null, null, null], [null, null, null], [null, null, null]]
+const tttArray = [
+  [' ', ' ', ' '],
+  [' ', ' ', ' '],
+  [' ', ' ', ' ']
+]
 
-// if a player clicks on the index and the value is null, display x
+let clickCounter = 0
 
-// $(() => {
-//   $('button').on('click', function () {
-//     event.preventDefault()
-//     console.log('button works')
-//     $(this).text('X')
-//   })
-// })
-
-if ()
-
-const name = function (event) {
-  event.preventDefault()
-  console.log('button works')
-  $(this).text('X')
+const displayX = function (target) {
+  clickCounter += 1 // increase clickCounter by 1
+  $(target).text('X')
+  const i = $(target).data('i')
+  const j = $(target).data('j')
+  tttArray[i][j] = 'X'
+  console.log(target)
+  console.log(i)
+  console.log(j)
+  console.log(clickCounter)
+}
+const displayO = function (target) {
+  clickCounter += 1
+  $(target).text('O')
+  const i = $(target).data('i')
+  const j = $(target).data('j')
+  tttArray[i][j] = 'O'
+  // console.log(j)
+  // console.log(clickCounter)
 }
 
-// const displayX = function (event) {
-//   event.preventDefault()
-//   console.log('heard a click')
-//   $(this).text('x')
-// }
-//
-// const name = function () {
-//   $('.col-xs-4').on('click', displayX())
-//   console.log('heard a click')
-// }
-// $("col-xs-4 box draw-bottom draw-right").on("click", )
-// if the index value is 'x', display "choose another square".
-// if
+const full = function () {
+  if ($('.col').text() === 'X' || $('.col').text() === 'O') {
+    $(this).attr('disabled', 'disabled')
+  }
+}
+
+// $('.col').on('click', function () {
+//   clickCounter += 1
+//   $(this).text('X')
+//   const i = $(this).data('i')
+//   const j = $(this).data('j')
+//   tttArray[i][j] = 'X'
+//   console.log(tttArray)
+//   console.log(clickCounter)
+// })
+
+
+const displayLetter = function (event) {
+  console.log(event.target)
+  console.log('in this function')
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      console.log(tttArray[i][j] === ' ')
+      if (tttArray[i][j] === ' ' && clickCounter % 2 === 0) {
+        console.log('display x', clickCounter)
+        displayX(event.target)
+        break
+      } else if (tttArray[i][j] === ' ' && clickCounter % 2 === 1) {
+        console.log('display y', clickCounter)
+        displayO(event.target)
+        break
+      } else {
+        full()
+        console.log('choose another square')
+        $('#message').text('Please choose another square')
+      }
+    }
+    console.log(tttArray)
+    break
+  }
+}
+
+
 
 module.exports = {
-  name
+  displayLetter
 }
