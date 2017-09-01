@@ -15,6 +15,7 @@ const onSignUp = function (event) {
 
 const addHandlers = function () {
   $('.box').on('click', logic.displayLetter)
+  $('.box').on('click', logic.whoWon)
   $('#sign-up').on('submit', onSignUp)
 }
 
