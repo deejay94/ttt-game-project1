@@ -7,55 +7,39 @@ $(() => {
   setAPIOrigin(location, config)
 })
 
-const tttArrray = [[null, null, null], [null, null, null], [null, null, null]]
+const tttArrray = ['', '', '', '', '', '', '', '', '']
 let clickCounter = 0
 
-// const displayX = function () {
-//   // event.preventDefault()
-//   $(this).text('X')
-//   clickCounter += 1
-//   console.log(this)
-// }
+const displayX = function (target) {
+  console.log('2 here')
+  console.log()
+  $(target).text('X')
+  clickCounter += 1
+}
 
-// const displayO = function () {
-//   // event.preventDefault()
-//   $(this).text('O')
-//   clickCounter += 1
-//   console.log(this)
-// }
+const displayO = function (target) {
+  console.log('firing O')
+  $(target).text('O')
+  clickCounter += 1
+}
 
-const displayLetter = function () {
-  if (clickCounter % 2 === 0) {
-    clickCounter += 1
-    $(this).text('X') //displayO()
-  } else {
-    clickCounter += 1
-    $(this).text('O') //displayX()
+const displayLetter = function (event) {
+  event.preventDefault()
+  console.log('here')
+  console.log(event.target)
+  if ($(event.target).text() === '') {
+    if (clickCounter % 2 === 0) {
+      displayX(event.target)
+    } else {
+      displayO(event.target)
+    }
   }
-  console.log(this)
 }
 
 $(() => {
-  $("button[class^='col-xs-4']").on('click', displayLetter)
+  $('.box').on('click', displayLetter)
 })
 
-
-
-
-
-  //
-
-  // $(() => {
-  //   $('button').on('click', function () {
-  //     // event.preventDefault()
-  //     console.log('button works')
-  //     // $(this).text('O')
-  //   })
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
-
-// use require without a reference to ensure a file is bundled
-// require('./example')
-
 module.exports = {
+  displayLetter
 }
