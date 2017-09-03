@@ -13,11 +13,21 @@ const onSignUp = function (event) {
     .catch(ui.signUpFailure)
 }
 
+const onSignIn = function (event) {
+  const data = getFormFields(event.target)
+  console.log(data)
+  event.preventDefault()
+  api.signIn(data)
+    .then(ui.signInSuccess)
+    .catch(ui.signInFailure)
+}
+
 const addHandlers = function () {
   $('.box').on('click', logic.displayLetter)
   $('.box').on('click', logic.whoWon)
   $('.reset').on('click', logic.newGame)
   $('#sign-up').on('submit', onSignUp)
+  $('#sign-in').on('submit', onSignIn)
 }
 
 module.exports = {

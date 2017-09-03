@@ -37,48 +37,49 @@ const displayLetter = function (event) {
 const newGame = function (event) {
   event.preventDefault()
   $('.box').text('')
+  $('#message').text('')
   $('.box').on('click', displayLetter)
   clickCounter = 0
 }
 
 const whoWon = function () {
   if (clickCounter <= 9) {
-  if (($('#box1').text() === $('#box2').text() && $('#box2').text() === $('#box3').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
-    $('#message').text(player() + ' is the Winner!!')
-$('.box').off()
-newGame()
-  } else if (($('#box1').text() === $('#box5').text() && $('#box5').text() === $('#box9').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
-    $('#message').text(' is the Winner!!')
-    $('.box').off()
-    newGame()
-  } else if (($('#box1').text() === $('#box4').text() && $('#box4').text() === $('#box7').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
-    $('#message').text(' is the Winner!!')
-    $('.box').off()
-    newGame()
-  } else if (($('#box2').text() === $('#box5').text() && $('#box5').text() === $('#box8').text()) && ($('#box2').text() === 'X' || $('#box2').text() === 'O')) {
-    $('#message').text(' is the Winner!!')
-    $('.box').off()
-    newGame()
-  } else if (($('#box3').text() === $('#box6').text() && $('#box6').text() === $('#box9').text()) && ($('#box3').text() === 'X' || $('#box3').text() === 'O')) {
-    $('#message').text(' is the Winner!!')
-    $('.box').off()
-    newGame()
-  } else if (($('#box4').text() === $('#box5').text() && $('#box5').text() === $('#box6').text()) && ($('#box4').text() === 'X' || $('#box4').text() === 'O')) {
-    $('#message').text(' is the Winner!!')
-    $('.box').off()
-    newGame()
-  } else if (($('#box3').text() === $('#box5').text() && $('#box5').text() === $('#box7').text()) && ($('#box3').text() === 'X' || $('#box3').text() === 'O')) {
-    $('#message').text(' is the Winner!!')
-    $('.box').off()
-    newGame()
-  } else if (($('#box7').text() === $('#box8').text() && $('#box8').text() === $('#box9').text()) && ($('#box7').text() === 'X' || $('#box7').text() === 'O')) {
-    $('#message').text(' is the Winner!!')
-    $('.box').off()
-    newGame()
+    if (($('#box1').text() === $('#box2').text() && $('#box2').text() === $('#box3').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
+      $('#message').text(player() + ' is the Winner!!')
+      $('.box').off()
+      newGame()
+    } else if (($('#box1').text() === $('#box5').text() && $('#box5').text() === $('#box9').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
+      $('#message').text(player() + ' is the Winner!!')
+      $('.box').off()
+      newGame()
+    } else if (($('#box1').text() === $('#box4').text() && $('#box4').text() === $('#box7').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
+      $('#message').text(player() + ' is the Winner!!')
+      $('.box').off()
+      newGame()
+    } else if (($('#box2').text() === $('#box5').text() && $('#box5').text() === $('#box8').text()) && ($('#box2').text() === 'X' || $('#box2').text() === 'O')) {
+      $('#message').text(player() + ' is the Winner!!')
+      $('.box').off()
+      newGame()
+    } else if (($('#box3').text() === $('#box6').text() && $('#box6').text() === $('#box9').text()) && ($('#box3').text() === 'X' || $('#box3').text() === 'O')) {
+      $('#message').text(player() + ' is the Winner!!')
+      $('.box').off()
+      newGame()
+    } else if (($('#box4').text() === $('#box5').text() && $('#box5').text() === $('#box6').text()) && ($('#box4').text() === 'X' || $('#box4').text() === 'O')) {
+      $('#message').text(player() + ' is the Winner!!')
+      $('.box').off()
+      newGame()
+    } else if (($('#box3').text() === $('#box5').text() && $('#box5').text() === $('#box7').text()) && ($('#box3').text() === 'X' || $('#box3').text() === 'O')) {
+      $('#message').text(player() + ' is the Winner!!')
+      $('.box').off()
+      newGame()
+    } else if (($('#box7').text() === $('#box8').text() && $('#box8').text() === $('#box9').text()) && ($('#box7').text() === 'X' || $('#box7').text() === 'O')) {
+      $('#message').text(player() + ' is the Winner!!')
+      $('.box').off()
+      newGame()
+    }
+  } else {
+    $('#message').text('Issa Draw')
   }
-} else {
-  $('#message').text('Issa Draw')
-}
 }
 
 module.exports = {
