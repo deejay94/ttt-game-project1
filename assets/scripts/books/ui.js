@@ -1,4 +1,5 @@
 const store = require('../store')
+// const logic = require('./gamelogic')
 
 const signUpSuccess = function (data) {
   console.log(data)
@@ -16,6 +17,7 @@ const signInSuccess = function (data) {
   console.log('Successfully signed in')
   $('#message').text('Successfully signed in')
   store.user = data.user
+  $('#change-password').show()
 }
 
 const signInFailure = function (error) {
@@ -44,6 +46,29 @@ const signOutFailure = function (error) {
   $('#message').text('Error on sign out')
 }
 
+const createGameSuccess = function (data) {
+  console.log(data)
+  $('#message').text('Successfully created game')
+  store.game = data.game
+  console.log(data.game)
+}
+
+const createGameFailure = function (error) {
+  console.error(error)
+  $('#message').text('Error on creating a game')
+}
+
+const updateGameSuccess = function (data) {
+  $('#message').text('Successfully updated game')
+  store.game = data.game
+  console.log(store.game)
+}
+
+const updateGameFailure = function (error) {
+  console.error(error)
+  $('#message').text('Error on updating a game')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -52,5 +77,9 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutFailure,
-  signOutSuccess
+  signOutSuccess,
+  createGameSuccess,
+  createGameFailure,
+  updateGameSuccess,
+  updateGameFailure
 }
