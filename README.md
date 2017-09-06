@@ -19,8 +19,6 @@ staring at for 20+ min.
 
 Unsolved problems:
 
-Statistics not shown
-GET games not completed
 Reset form
 
 
