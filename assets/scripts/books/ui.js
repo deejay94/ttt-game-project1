@@ -70,6 +70,19 @@ const updateGameFailure = function (error) {
   $('#message').text('Error on updating a game')
 }
 
+const onSuccess = function (data) {
+  if (data.games) {
+    $('#message2').text('You have played ' + data.games.length + ' games!')
+    console.log(data.games)
+  } else {
+    console.table(data.games)
+  }
+}
+
+const onError = function (response) {
+  console.error(response)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -82,5 +95,7 @@ module.exports = {
   createGameSuccess,
   createGameFailure,
   updateGameSuccess,
-  updateGameFailure
+  updateGameFailure,
+  onSuccess,
+  onError
 }

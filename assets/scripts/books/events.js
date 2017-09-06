@@ -64,6 +64,14 @@ const OnUpdateGame = function () {
     .catch(ui.updateGameFailure)
 }
 
+const onGetGames = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.index(data)
+    .then(ui.onSuccess)
+    .catch(ui.onError)
+}
+
 const addHandlers = function () {
   $('.box').on('click', logic.displayLetter)
   $('.box').on('click', logic.whoWon)
@@ -73,10 +81,12 @@ const addHandlers = function () {
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
   $('#create-game').on('click', onCreateGame)
+  $('#games-search').on('click', onGetGames)
 }
 
 module.exports = {
   addHandlers,
   onCreateGame,
-  OnUpdateGame
+  OnUpdateGame,
+  onGetGames
 }

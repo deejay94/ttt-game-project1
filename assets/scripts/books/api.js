@@ -68,11 +68,23 @@ const updateGame = function (index, value, isOver) {
     }
   })
 }
+
+const index = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/games',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
   createGame,
-  updateGame
+  updateGame,
+  index
 }
