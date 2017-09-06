@@ -49,6 +49,7 @@ const onCreateGame = function (event) {
   $('.box').text('')
   $('.box').on('click', logic.displayLetter)
   $('.box').on('click', logic.whoWon)
+  $('#message3').text('')
   store.clickCounter = 0
 }
 

@@ -13,8 +13,10 @@ const signInSuccess = function (data) {
   $('#message').text('Successfully signed in')
   store.user = data.user
   $('#change-password').show()
-  $('.container').show()
   $('#sign-up').trigger('reset')
+  $('#sign-out').show()
+  $('#create-game').show()
+  $('.games').show()
 }
 
 const signInFailure = function () {
@@ -59,7 +61,7 @@ const updateGameFailure = function () {
 
 const onSuccess = function (data) {
   if (data.games) {
-    $('#message2').text('You have played ' + data.games.length + ' games!')
+    $('#message2').text('You have played ' + data.games.length + ' game(s)!')
   } else {
   }
 }
