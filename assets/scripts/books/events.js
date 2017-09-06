@@ -7,7 +7,6 @@ const store = require('../store')
 
 const onSignUp = function (event) {
   const data = getFormFields(event.target)
-  console.log(data)
   event.preventDefault()
   api.signUp(data)
     .then(ui.signUpSuccess)
@@ -16,7 +15,6 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   const data = getFormFields(event.target)
-  console.log(data)
   event.preventDefault()
   api.signIn(data)
     .then(ui.signInSuccess)
@@ -25,7 +23,6 @@ const onSignIn = function (event) {
 
 const onChangePassword = function (event) {
   const data = getFormFields(event.target)
-  console.log(data)
   event.preventDefault()
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
@@ -45,7 +42,6 @@ const onSignOut = function (event) {
 
 const onCreateGame = function (event) {
   event.preventDefault()
-  console.log('We got to our event handler!')
   const data = getFormFields(event.target)
   api.createGame(data)
     .then(ui.createGameSuccess)

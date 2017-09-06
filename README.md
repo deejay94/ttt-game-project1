@@ -17,9 +17,16 @@ breaks when I completed something. But, I found when I was forced to take a
 break, I did come back with a clear mind and figured things out that I was
 staring at for 20+ min.
 
-Unsolved problems:
+User Stories:
 
-Reset form
+As a user, I would like to be able to tell how many games I've won.
+As a user, I would like to choose the level of difficulty
+As a user, I want to be able to choose which letter I am.
+
+Wireframe:
+https://imgur.com/a/8tyL0
+
+
 
 
 

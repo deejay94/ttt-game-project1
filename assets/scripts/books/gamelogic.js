@@ -22,7 +22,6 @@ const player = function () {
 }
 
 const displayX = function (target) {
-  console.log('2 here')
   $(target).text('X')
   store.clickCounter += 1
   const index = $(target).attr('id') // 0, 1, - 8
@@ -32,14 +31,11 @@ const displayX = function (target) {
   // change api.isOver to store property
   // start isover as false
   // make it so that whowon updates the store
-  console.log(store.clickCounter)
 }
 
 const displayO = function (target) {
-  console.log('firing O')
   $(target).text('O')
   store.clickCounter += 1
-  console.log(store.clickCounter)
 }
 
 const displayLetter = function (event) {
