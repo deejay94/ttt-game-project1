@@ -21,7 +21,6 @@ const onSignIn = function (event) {
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
-  $('#change-password').show()
 }
 
 const onChangePassword = function (event) {
@@ -41,6 +40,7 @@ const onSignOut = function (event) {
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
   $('.box').hide()
+  $('#change-password').hide()
 }
 
 const onCreateGame = function (event) {

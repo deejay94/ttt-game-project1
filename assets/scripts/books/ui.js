@@ -18,6 +18,7 @@ const signInSuccess = function (data) {
   $('#message').text('Successfully signed in')
   store.user = data.user
   $('#change-password').show()
+  $('.container').show()
 }
 
 const signInFailure = function (error) {
