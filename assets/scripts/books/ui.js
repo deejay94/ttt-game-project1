@@ -61,7 +61,7 @@ const updateGameFailure = function () {
 
 const onSuccess = function (data) {
   if (data.games) {
-    $('#message2').text('You have played ' + data.games.length + ' games!')
+    $('#message2').text('You have played ' + data.games.length + ' game(s)!')
   } else {
   }
 }

@@ -33,13 +33,16 @@ const displayX = function (target) {
   // change api.isOver to store property
   // start isover as false
   // make it so that whowon updates the store
-  $('#message3').text('It\'s O\'s turn')
+  $('#message3').text('It\'s O\'s turn!')
 }
 
 const displayO = function (target) {
   $(target).text('O')
   store.clickCounter += 1
-  $('#message3').text('It\'s X\'s turn')
+  const index = $(target).attr('id') // 0, 1, - 8
+  const gameOver = whoWon()
+  api.updateGame(index, 'O', gameOver)
+  $('#message3').text('It\'s X\'s turn!')
 }
 
 const displayLetter = function (event) {
@@ -50,23 +53,17 @@ const displayLetter = function (event) {
     } else {
       displayO(event.target)
     }
+  } else {
+    $('#message3').text('Choose another square!!')
   }
 }
-
-// const resetGame = function () {
-//   $('.box').text('')
-//   $('#message').text('')
-//   store.clickCounter = 0
-//   $('.box').on('click', displayLetter)
-//   $('.box').on('click', whoWon)
-// }
 
 const whoWon = function () {
   if (store.clickCounter <= 9) {
     if (($('#box0').text() === $('#box1').text() && $('#box1').text() === $('#box2').text()) && ($('#box0').text() === 'X' || $('#box0').text() === 'O')) {
       $('#message').text(player() + ' is the Winner!!')
       $('.box').off()
-      // api.isOver = true
+      api.isOver = true
     } else if (($('#box0').text() === $('#box4').text() && $('#box4').text() === $('#box8').text()) && ($('#box0').text() === 'X' || $('#box0').text() === 'O')) {
       $('#message').text(player() + ' is the Winner!!')
       $('.box').off()
@@ -109,5 +106,4 @@ const whoWon = function () {
 module.exports = {
   displayLetter,
   whoWon
-  // resetGame
 }
