@@ -6,10 +6,12 @@ const tttArrray = ['', '', '', '', '', '', '', '', '']
 $(function () {
   $('.sign-up').text('')
   $('.sign-in').text('')
-  $('.box').hide()
   $('#change-password').hide()
+  $('#sign-out').hide()
+  $('.games').hide()
+  $('#create-game').hide()
   $('#sign-in').on('submit', function () {
-    $('.box').show()
+    $('.container').show()
   })
 })
 
@@ -31,11 +33,13 @@ const displayX = function (target) {
   // change api.isOver to store property
   // start isover as false
   // make it so that whowon updates the store
+  $('#message3').text('It\'s O\'s turn')
 }
 
 const displayO = function (target) {
   $(target).text('O')
   store.clickCounter += 1
+  $('#message3').text('It\'s X\'s turn')
 }
 
 const displayLetter = function (event) {

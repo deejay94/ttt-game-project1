@@ -13,8 +13,10 @@ const signInSuccess = function (data) {
   $('#message').text('Successfully signed in')
   store.user = data.user
   $('#change-password').show()
-  $('.container').show()
   $('#sign-up').trigger('reset')
+  $('#sign-out').show()
+  $('#create-game').show()
+  $('.games').show()
 }
 
 const signInFailure = function () {
