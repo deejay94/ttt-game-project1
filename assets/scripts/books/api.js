@@ -52,7 +52,7 @@ const createGame = function (data) {
 
 const updateGame = function (index, value, isOver) {
   return $.ajax({
-    url: config.apiOrigin + '/games/' + store.user.id,
+    url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
     data: {
       'game': {
