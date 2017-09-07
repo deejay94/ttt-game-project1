@@ -35,6 +35,11 @@ const changePasswordFailure = function () {
 const signOutSuccess = function () {
   $('#message').text('Successfully signed out')
   $('#sign-in').trigger('reset')
+  $('#sign-out').hide()
+  $('.games').hide()
+  $('#message3').text('')
+  $('#create-game').hide()
+  $('#message2').text('')
 }
 
 const signOutFailure = function () {
