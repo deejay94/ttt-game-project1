@@ -44,6 +44,7 @@ const signOutSuccess = function () {
   $('#message2').text('')
   $('#sign-up').show()
   $('.box').text('')
+  store.clickCounter = 0
 }
 
 const signOutFailure = function () {
