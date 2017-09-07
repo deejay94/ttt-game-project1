@@ -17,8 +17,8 @@ const signInSuccess = function (data) {
   $('#sign-out').show()
   $('#create-game').show()
   $('.games').show()
-  $('.box').show()
   $('#sign-up').hide()
+  $('.box').off()
 }
 
 const signInFailure = function () {
@@ -54,6 +54,7 @@ const signOutFailure = function () {
 const createGameSuccess = function (data) {
   $('#message').text('Successfully created game')
   store.game = data.game
+  $('.box').show()
 }
 
 const createGameFailure = function () {
