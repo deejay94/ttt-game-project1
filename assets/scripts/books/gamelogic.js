@@ -10,9 +10,6 @@ $(function () {
   $('#sign-out').hide()
   $('.games').hide()
   $('#create-game').hide()
-  $('#sign-in').on('submit', function () {
-    $('.container').show()
-  })
 })
 
 const player = function () {
