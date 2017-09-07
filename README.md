@@ -2,10 +2,10 @@ https://deejay94.github.io/ttt-game-project1/
 
 Technology used:
 
-Atom
-Terminal
-Github/Github Enterprise
-Slack
+Javascript
+HTML
+CSS
+jQuery
 
 Planning and Problem-Solving Strategies:
 
@@ -22,6 +22,10 @@ User Stories:
 As a user, I would like to be able to tell how many games I've won.
 As a user, I would like to choose the level of difficulty
 As a user, I want to be able to choose which letter I am.
+
+Unsolved problems:
+I wish I could have worked on styling a bit more and had a chance to be more
+creative.
 
 Wireframe:
 https://imgur.com/a/8tyL0
