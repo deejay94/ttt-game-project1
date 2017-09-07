@@ -3,6 +3,7 @@ const store = require('../store')
 
 const signUpSuccess = function () {
   $('#message').text('Successfully signed up')
+  $('#sign-up').hide()
 }
 
 const signUpFailure = function () {
@@ -41,6 +42,7 @@ const signOutSuccess = function () {
   $('#message3').text('')
   $('#create-game').hide()
   $('#message2').text('')
+  $('#sign-up').show()
 }
 
 const signOutFailure = function () {
