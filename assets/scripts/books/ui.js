@@ -19,6 +19,7 @@ const signInSuccess = function (data) {
   $('.games').show()
   $('#sign-up').hide()
   $('.box').off()
+  $('#sign-in').hide()
 }
 
 const signInFailure = function () {
@@ -44,6 +45,7 @@ const signOutSuccess = function () {
   $('#message2').text('')
   $('#sign-up').show()
   $('.box').text('')
+  $('#sign-in').show()
   store.clickCounter = 0
 }
 
