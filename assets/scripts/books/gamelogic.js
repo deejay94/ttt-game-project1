@@ -1,3 +1,4 @@
+
 const api = require('./api')
 const store = require('../store')
 
@@ -65,35 +66,35 @@ const whoWon = function () {
     } else if (($('#box0').text() === $('#box4').text() && $('#box4').text() === $('#box8').text()) && ($('#box0').text() === 'X' || $('#box0').text() === 'O')) {
       $('#message3').text(player() + ' is the Winner!!')
       $('.box').off()
-      // api.isOver = true
+      api.isOver = true
     } else if (($('#box0').text() === $('#box3').text() && $('#box3').text() === $('#box6').text()) && ($('#box0').text() === 'X' || $('#box0').text() === 'O')) {
       $('#message3').text(player() + ' is the Winner!!')
       $('.box').off()
-      // api.isOver = true
+      api.isOver = true
     } else if (($('#box1').text() === $('#box4').text() && $('#box4').text() === $('#box7').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
       $('#message3').text(player() + ' is the Winner!!')
       $('.box').off()
-      // api.isOver = true
+      api.isOver = true
     } else if (($('#box2').text() === $('#box5').text() && $('#box5').text() === $('#box8').text()) && ($('#box2').text() === 'X' || $('#box2').text() === 'O')) {
       $('#message3').text(player() + ' is the Winner!!')
       $('.box').off()
-      // api.isOver = true
+      api.isOver = true
     } else if (($('#box3').text() === $('#box4').text() && $('#box4').text() === $('#box5').text()) && ($('#box4').text() === 'X' || $('#box4').text() === 'O')) {
       $('#message3').text(player() + ' is the Winner!!')
       $('.box').off()
-      // api.isOver = true
+      api.isOver = true
     } else if (($('#box2').text() === $('#box4').text() && $('#box4').text() === $('#box6').text()) && ($('#box2').text() === 'X' || $('#box2').text() === 'O')) {
       $('#message3').text(player() + ' is the Winner!!')
       $('.box').off()
-      // api.isOver = true
+      api.isOver = true
     } else if (($('#box6').text() === $('#box7').text() && $('#box7').text() === $('#box8').text()) && ($('#box6').text() === 'X' || $('#box6').text() === 'O')) {
       $('#message3').text(player() + ' is the Winner!!')
       $('.box').off()
-      // api.isOver = true
+      api.isOver = true
     } else if (store.clickCounter === 9) {
       $('#message3').text('Issa Draw')
       $('.box').off()
-      // api.isOver = true
+      api.isOver = true
     } else {
       // api.isOver = false
     }
