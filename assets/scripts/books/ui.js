@@ -32,7 +32,6 @@ const changePasswordSuccess = function () {
 
 const changePasswordFailure = function () {
   $('#message').text('Error on change password')
-  store.user = null
 }
 
 const signOutSuccess = function () {
