@@ -96,7 +96,6 @@ const whoWon = function () {
       $('.box').off()
       api.isOver = true
     } else {
-      // api.isOver = false
     }
     return api.isOver
   }

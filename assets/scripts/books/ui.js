@@ -1,5 +1,4 @@
 const store = require('../store')
-// const logic = require('./gamelogic')
 
 const signUpSuccess = function () {
   $('#message').text('Successfully signed up')
