@@ -6,10 +6,16 @@ $background-color: #000;
 $font-color: #ffc0cb;
 $white: #fff;
 $dark-pink: #ff69b4;
+$green: #7ffa7f;
+$blue: #6d8ce8;
 
 
 .auth {
   color: $font-color;
+}
+
+.blue {
+  color: $blue;
 }
 
 body {
@@ -52,10 +58,23 @@ body {
   border-right: 5px solid black;
 }
 
+.green {
+  color: $green;
+}
+
 input {
   color: $dark-pink;
 }
 
+#myBtn {
+  float: right;
+  margin-right: 40px;
+}
+
 .sign-out {
   display: none;
+}
+
+.title {
+  text-align: center;
 }
