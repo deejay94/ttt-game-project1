@@ -1,18 +1,24 @@
 
 const api = require('./api')
 const store = require('../store')
+const randomColor = require('randomcolor')
 
 const tttArrray = ['', '', '', '', '', '', '', '', '']
 
 $(function () {
   $('.sign-up').text('')
   $('.sign-in').text('')
-  $('#change-password').hide()
-  $('#sign-out').hide()
+  // $('#change-password').hide()
+  // $('#sign-out').hide()
   $('.games').hide()
   $('#create-game').hide()
   $('.box').hide()
+  $('#myBtn').hide()
 })
+
+const randomColors = function () {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16)
+}
 
 const player = function () {
   if (store.clickCounter % 2 === 1) {
@@ -23,7 +29,7 @@ const player = function () {
 }
 
 const displayX = function (target) {
-  $(target).text('X')
+  $(target).text('X').css('color', 'blue')
   store.clickCounter += 1
   const index = $(target).attr('id') // 0, 1, - 8
   const gameOver = whoWon()
@@ -96,7 +102,6 @@ const whoWon = function () {
       $('.box').off()
       api.isOver = true
     } else {
-      // api.isOver = false
     }
     return api.isOver
   }

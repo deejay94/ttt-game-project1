@@ -2,66 +2,100 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 
-$background-color: #fff;
-
-$font-color: #000;
-
+$background-color: #000;
+$font-color: #ffc0cb;
 $white: #fff;
+$dark-pink: #ff69b4;
+$green: #7ffa7f;
+$blue: #6d8ce8;
+$red: #ff3232;
+$yellow: #ff0;
+$purple: #a020f0;
 
 
+.auth {
+  color: $font-color;
+}
+
+.blue {
+  color: $blue;
+}
 
 body {
-
   background-color: $background-color;
-
   color: $font-color;
-
+  text-shadow: 3px 3px 10px $dark-pink;
 }
 
 .box {
-
   border: 1px solid $white;
-
   background-color: $white;
-
   width: 33%;
-
   height: 2.5em;
-
   font-size: 5em;
-
+  text-align: center;
+  padding-top: 30px;
 }
 
-// .container {
-//   display: none;
-// }
+.btn-secondary {
+  background-color: $dark-pink;
+  color: $white;
+}
 
+#change-password {
+  margin-bottom: 50px;
+}
 
+.container {
+  margin-top: 80px;
+}
 
 .draw-bottom {
-
   border-bottom: 5px solid black;
-
 }
 
 .draw-top {
-
   border-top: 5px solid black;
-
 }
 
 .draw-left {
-
   border-left: 5px solid black;
-
 }
 
 .draw-right {
-
   border-right: 5px solid black;
+}
 
+.green {
+  color: $green;
+  text-shadow: 5px 5px 10px $green;
+}
+
+input {
+  color: $dark-pink;
+}
+
+#myBtn {
+  float: right;
+  margin-right: 40px;
+}
+
+.purple {
+  color: $purple;
+}
+
+.red {
+  color: $red;
 }
 
 .sign-out {
   display: none;
+}
+
+.title {
+  text-align: center;
+}
+
+.yellow {
+  color: $yellow;
 }

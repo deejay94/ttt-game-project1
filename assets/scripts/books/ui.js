@@ -1,5 +1,4 @@
 const store = require('../store')
-// const logic = require('./gamelogic')
 
 const signUpSuccess = function () {
   $('#message').text('Successfully signed up')
@@ -20,6 +19,7 @@ const signInSuccess = function (data) {
   $('#sign-up').hide()
   $('.box').off()
   $('#sign-in').hide()
+  $('#myBtn').show()
 }
 
 const signInFailure = function () {
