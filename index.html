@@ -13,12 +13,52 @@
     </head>
     <body class="container-fluid">
       <h1>Tic-Tac Glow</h1>
+      <!-- Button trigger modal -->
+      <button id="myBtn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        options
+      </button>
 
-      <form id="create-game">
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">User options</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+              <form id="change-password">
+                <fieldset>
+                  <h3 class="auth">Change Password!</h3>
+                  <input type="password" name="passwords[old]" placeholder="Old Password">
+                  <input type="password" name="passwords[new]" placeholder="New Password">
+                  <input type="submit" name="submit" value="Change Password!">
+                </fieldset>
+              </form>
+
+              <form class="sign-out" id="sign-out">
+                      <fieldset>
+                        <input type="submit" name="sign out" value="Sign Out!">
+                      </fieldset>
+                    </form>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- <form id="create-game">
               <fieldset>
                 <input type="submit" name="create game" value="Create New Game!">
               </fieldset>
-            </form>
+            </form> -->
 
 
       <p id='message'></p>
@@ -41,20 +81,20 @@
         </fieldset>
       </form>
 
-      <form id="change-password">
+      <!-- <form id="change-password">
         <fieldset>
           <h3 class="auth">Change Password!</h3>
           <input type="password" name="passwords[old]" placeholder="Old Password">
           <input type="password" name="passwords[new]" placeholder="New Password">
           <input type="submit" name="submit" value="Change Password!">
         </fieldset>
-      </form>
+      </form> -->
 
-      <form class="sign-out" id="sign-out">
+      <!-- <form class="sign-out" id="sign-out">
               <fieldset>
                 <input type="submit" name="sign out" value="Sign Out!">
               </fieldset>
-            </form>
+            </form> -->
 
             <h2 id="message2"></h2>
 
