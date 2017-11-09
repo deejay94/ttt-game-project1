@@ -2,41 +2,30 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 
-$background-color: #fff;
-
-$font-color: #000;
-
+$background-color: #000;
+$font-color: #ffc0cb;
 $white: #fff;
+$dark-pink: #ff69b4;
 
 
+.auth {
+  color: $font-color;
+}
 
 body {
-
   background-color: $background-color;
-
   color: $font-color;
-
 }
 
 .box {
-
   border: 1px solid $white;
-
   background-color: $white;
-
   width: 33%;
-
   height: 2.5em;
-
   font-size: 5em;
-
+  text-align: center;
+  padding-top: 30px;
 }
-
-// .container {
-//   display: none;
-// }
-
-
 
 .draw-bottom {
 
@@ -60,6 +49,10 @@ body {
 
   border-right: 5px solid black;
 
+}
+
+input {
+  color: $dark-pink;
 }
 
 .sign-out {
