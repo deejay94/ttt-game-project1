@@ -27,28 +27,29 @@ body {
   padding-top: 30px;
 }
 
+.btn-secondary {
+  background-color: $dark-pink;
+  color: $white;
+}
+
+#change-password {
+  margin-bottom: 50px;
+}
+
 .draw-bottom {
-
   border-bottom: 5px solid black;
-
 }
 
 .draw-top {
-
   border-top: 5px solid black;
-
 }
 
 .draw-left {
-
   border-left: 5px solid black;
-
 }
 
 .draw-right {
-
   border-right: 5px solid black;
-
 }
 
 input {
