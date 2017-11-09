@@ -7,11 +7,12 @@ const tttArrray = ['', '', '', '', '', '', '', '', '']
 $(function () {
   $('.sign-up').text('')
   $('.sign-in').text('')
-  $('#change-password').hide()
-  $('#sign-out').hide()
+  // $('#change-password').hide()
+  // $('#sign-out').hide()
   $('.games').hide()
-  $('#create-game').hide()
+  // $('#create-game').hide()
   $('.box').hide()
+  $('#myBtn').hide()
 })
 
 const player = function () {
