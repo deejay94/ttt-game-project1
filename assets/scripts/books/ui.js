@@ -19,6 +19,7 @@ const signInSuccess = function (data) {
   $('#sign-up').hide()
   $('.box').off()
   $('#sign-in').hide()
+  $('#myBtn').show()
 }
 
 const signInFailure = function () {
