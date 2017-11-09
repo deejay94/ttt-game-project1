@@ -8,6 +8,9 @@ $white: #fff;
 $dark-pink: #ff69b4;
 $green: #7ffa7f;
 $blue: #6d8ce8;
+$red: #ff3232;
+$yellow: #ff0;
+$purple: #a020f0;
 
 
 .auth {
@@ -21,6 +24,7 @@ $blue: #6d8ce8;
 body {
   background-color: $background-color;
   color: $font-color;
+  text-shadow: 3px 3px 10px $dark-pink;
 }
 
 .box {
@@ -42,6 +46,10 @@ body {
   margin-bottom: 50px;
 }
 
+.container {
+  margin-top: 80px;
+}
+
 .draw-bottom {
   border-bottom: 5px solid black;
 }
@@ -60,6 +68,7 @@ body {
 
 .green {
   color: $green;
+  text-shadow: 5px 5px 10px $green;
 }
 
 input {
@@ -71,10 +80,22 @@ input {
   margin-right: 40px;
 }
 
+.purple {
+  color: $purple;
+}
+
+.red {
+  color: $red;
+}
+
 .sign-out {
   display: none;
 }
 
 .title {
   text-align: center;
+}
+
+.yellow {
+  color: $yellow;
 }
