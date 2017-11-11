@@ -73,7 +73,7 @@ const updateGameFailure = function () {
 
 const onSuccess = function (data) {
   if (data.games) {
-    $('#message2').text('You have played ' + data.games.length + ' game(s)!')
+    $('#message2').text('You have played ' + data.games.length + ' game(s)!').css('color', 'green').css('text-shadow', '5px 5px 10px green')
   } else {
   }
 }
